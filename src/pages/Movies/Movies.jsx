@@ -4,7 +4,7 @@ import { getSearchMovie } from 'components/Api';
 import SearchBar from 'components/SearchBar/SearchBar';
 import { Link, useSearchParams } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
-import noImage from '../../no-image.jpeg';
+import noImage from '../../noImage.jpeg';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import css from './Movie.module.css';

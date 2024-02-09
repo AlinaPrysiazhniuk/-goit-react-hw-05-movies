@@ -1,7 +1,7 @@
 import { getMovieDetails } from 'components/Api';
 import { useState, useEffect } from 'react';
 import { useParams, useLocation, Link, Outlet } from 'react-router-dom';
-import noImage from '../../no-image.jpeg';
+import noImage from '../../noImage.jpeg';
 import css from './MovieDaetails.module.css';
 
 const MovieDetails = () => {
