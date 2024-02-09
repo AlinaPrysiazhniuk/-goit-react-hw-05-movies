@@ -39,7 +39,8 @@
   margin: auto;
   padding-bottom: 10px;
   padding-top: 10px;
-  max-width: 100%;
+  width: 100%;
+  max-width: max-content;
 }
 
 .text {

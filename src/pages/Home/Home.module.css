@@ -31,7 +31,7 @@
   background-color: aliceblue;
   border: 1px solid rgb(149, 143, 143);
   border-radius: 5px;
-  width: 260px;
+  width: 240px;
   flex-direction: column;
   transition: 250ms;
 }
