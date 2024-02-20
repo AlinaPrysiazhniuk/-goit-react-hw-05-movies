@@ -13,7 +13,7 @@ const MovieDetails = () => {
 
   const getYear = () => new Date(movie.release_date).getFullYear();
 
-  const getData = async () => {
+  const getData = async (movieId) => {
     await getMovieDetails(movieId)
           .then(({ data }) => {
         setMovie(data);
