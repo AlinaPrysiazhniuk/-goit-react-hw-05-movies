@@ -6,18 +6,20 @@ import css from './Home.module.css';
 const Home = () => {
   const [movies, setMovies] = useState([]);
 
-  const getData = async () => {
-    await getTrendingMovies()
-      .then(({ data }) => setMovies(data.results))
-          .catch(error => {
+  
+  useEffect(() => {
+    const getData = async () => {
+      try {
+        const results = await getTrendingMovies();
+        setMovies(results);
+      } catch (error) {
         throw new Error(
           'woops, something went wromg... Please, try agin later.'
         );
-      });
-}
+      };
+  
+    }; getData();
 
-  useEffect(() => {
-    getData();
     // getTrendingMovies()
     //   .then(({ data }) => setMovies(data.results))
     //   .catch(error => {
