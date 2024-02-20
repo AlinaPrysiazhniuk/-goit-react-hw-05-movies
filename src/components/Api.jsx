@@ -18,8 +18,9 @@ const {data} = await axios.get(`${BASE_URL}/movie/${movieId}/credits?api_key=${A
   return data.cast;
 };
 
-export const getReviewsDetails = movieId => {
-  return axios.get(`${BASE_URL}/movie/${movieId}/reviews?api_key=${API_KEY}`);
+export const getReviewsDetails =async movieId => {
+  const { data } = await axios.get(`${BASE_URL}/movie/${movieId}/reviews?api_key=${API_KEY}`);
+  return data.results;
 };
 
 export const getSearchMovie = async query => {
