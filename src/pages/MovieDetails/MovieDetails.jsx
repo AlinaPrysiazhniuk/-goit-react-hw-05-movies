@@ -13,20 +13,19 @@ const MovieDetails = () => {
 
   const getYear = () => new Date(movie.release_date).getFullYear();
 
-  const getData = async movieId => {
-    await getMovieDetails(movieId)
-          .then(({ data }) => {
-        setMovie(data);
-      })
-      .catch(error => {
+
+
+  useEffect(() => {
+    const getMovieId = async () => {
+      try {
+        const result = await getMovieDetails(movieId);
+        setMovie(result);
+      } catch (error) {
         throw new Error(
           'woops, something went wromg... Please, try agin later.'
         );
-      });
-}
-
-  useEffect(() => {
-    getData(movieId);
+      }
+    }; getMovieId();
     // getMovieDetails(movieId)
     //   .then(({ data }) => {
     //     setMovie(data);
